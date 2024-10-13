@@ -106,6 +106,11 @@ void loop() {
 
 
 
+//****************************************************************
+//*    Receive move from you based on joystick input and         *
+//*    pushButtpn press, play the move of arduino and display    *
+//*    the results on the 9 output leds                          * 
+//****************************************************************
 void InsertPosition(void) {
   if(endOfGame == 0){
     //read joystick x andy position when pushbutton is pressed
