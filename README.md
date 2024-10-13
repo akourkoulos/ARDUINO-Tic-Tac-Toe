@@ -78,4 +78,4 @@ The game can be reset, and the starting player can be changed using controls int
 
 ## Project Circuit
 
-![alt text](https://github.com/akourkoulos/ARDUINO-Tic-Tac-Toe)
+![alt text](https://github.com/akourkoulos/ARDUINO-Tic-Tac-Toe/blob/main/tictactoeCircuit.png)
