@@ -11,7 +11,7 @@ The game can be reset, and the starting player can be changed using controls int
 - [How It Works](#how-it-works)
 - [Installation & Setup](#installation--setup)
 - [How to Play](#how-to-play)
-- [Project Circuit based on code](#project-circuit)
+- [Project Circuit](#project-circuit)
 
 ## Features
 
@@ -78,4 +78,4 @@ The game can be reset, and the starting player can be changed using controls int
 
 ## Project Circuit
 
-![alt text]([http://url/to/img.png](https://github.com/akourkoulos/ARDUINO-Tic-Tac-Toe/blob/main/TicTacToe.ino))
+![alt text](https://github.com/akourkoulos/ARDUINO-Tic-Tac-Toe/blob/main/TicTacToe.ino)
