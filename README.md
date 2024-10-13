@@ -11,7 +11,7 @@ The game can be reset, and the starting player can be changed using controls int
 - [How It Works](#how-it-works)
 - [Installation & Setup](#installation--setup)
 - [How to Play](#how-to-play)
-- [Project Circuit based on code](#project Circuit based on code)
+- [Project Circuit based on code](#project-circuit)
 
 ## Features
 
@@ -76,6 +76,6 @@ The game can be reset, and the starting player can be changed using controls int
    - Press the main pushbutton to reset the game and start a new round.
    - To change who plays first, press the joystick’s integrated pushbutton before starting the next game.
 
-## Project Circuit based on code
+## Project Circuit
 
-![alt text](http://url/to/img.png)
+![alt text]([http://url/to/img.png](https://github.com/akourkoulos/ARDUINO-Tic-Tac-Toe/blob/main/TicTacToe.ino))
