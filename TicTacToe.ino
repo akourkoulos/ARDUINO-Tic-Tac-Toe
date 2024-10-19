@@ -105,7 +105,6 @@ void loop() {
 }
 
 
-
 //****************************************************************
 //*    Receive move from you based on joystick input and         *
 //*    pushButtpn press, play the move of arduino and display    *
@@ -363,7 +362,7 @@ void changePlayersTurn(void){
   }
   else if(whoStarts == youStart){
     whoStarts = arduinoStarts;
-    if(isGridEmpty(grid)){
+    if(FindNumOfMoves(grid) == 0){
       playXMove(); // call function for arduino to play a move
       InsertMoveInLED(); //call function for inserting the moves in LED grid
     }
@@ -417,6 +416,22 @@ struct Move findBestMove(int board[3][3])
     bestMove.row = -1; 
     bestMove.col = -1; 
   
+
+    if(FindNumOfMoves(board) == 0){ // if grid empty and arduino plays first, play move in first cell (to save time from calculating)  
+      bestMove.row = 0;
+      bestMove.col = 0;
+      return bestMove;
+    }
+    else if(FindNumOfMoves(board) == 1 & board[1][1] == 0){// if grid has only one move and its not in midle and arduino plays second, play move in midle  (to save time from calculating)
+      bestMove.row = 1;
+      bestMove.col = 1;
+      return bestMove;
+    }
+    else if(FindNumOfMoves(board) == 1 & board[1][1] != 0){// if grid has only one move and its in midle and arduino plays second, play move in first cell (to save time from calculating)
+      bestMove.row = 0;
+      bestMove.col = 0;
+      return bestMove;
+    }
     // Traverse all cells, evaluate minimax function for 
     // all empty cells. And return the cell with optimal 
     // value. 
@@ -598,11 +613,12 @@ bool isMovesLeft(int board[3][3])
 //*                    It returns false if                       *
 //*             there are inserted moves in board                *
 //****************************************************************
-bool isGridEmpty(int board[3][3]) 
+int FindNumOfMoves(int board[3][3]) 
 { 
+   int numOfMoves = 0 ;
     for (int i = 0; i < 3; i++) 
         for (int j = 0; j < 3; j++) 
             if (board[i][j] != 0) 
-                return false; 
-    return true; 
+              numOfMoves = numOfMoves + 1;
+   return numOfMoves; 
 } 
